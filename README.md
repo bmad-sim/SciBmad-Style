@@ -2,12 +2,12 @@
 Style/convention rules for SciBmad
 
 1. Type stability as much as possible! Use the macro `@report_opt` in `JET.jl` to aid in writing good code
-2. Two (2) spaces should be uses for tabs. No tab characters! (in most text editors you can set the tab length to two spaces
+2. Two (2) spaces should be uses for tabs. No tab characters! (in most text editors you can set the tab length to two spaces)
 3. CamelCase for modules and structs
 4. A file which contains a module should have the file name be the same as the module name: e.g. `Module MyModule` should be in `MyModule.jl`).
 5. Non-module files should be snake_case
 6. Global constants should be capitalized SNAKE_CASE
-7. Longer function names should be snake_case, short ones could go either way (e.g. `set_units!` and `setunits!` are both ok, but `track_a_drift` should be used instead of `trackadrift`)
+7. Longer function names should be snake_case, short ones could go either way (e.g. `set_units!` and `setunits!` are both ok, but `track_a_drift` should be used instead of `trackadrift`). Exception: struct constructors should have the same name as the struct and will therefore inherit the CamelCase struct name.
 8. Bang (!) at end of function that mutates any argument per Julia standard
 9. For functions with many arguments/keyword arguments, format the arguments like:
 ```julia
