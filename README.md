@@ -23,3 +23,15 @@ end
 11. Avoid specifying types as much as possible unless that argument _must_ be a specific type. This is for composability with the rest of the Julia environment. Type-stable functions will then incur no cost. E.g., `AbstractString` should be used instead of `String` for function arguments (e.g. `function foo(mystring::AbstractString)` instead of `function foo(mystring::String)`
 12. All exports should be included at the top of the main package file in the module. See `GTPSA.jl` for an example
 13. File names should concisely represent what's in those files. E.g. a file containing all type definitions might be called `types.jl`, and a file containing all constructors for a type `Type` might be `type_ctors.jl` or just `ctors.jl`. Directory structure could be good too, `type/ctors.jl`
+14. Mark internal functions, structs, etc. with the string "Internal:" For example
+```
+"""
+    Internal: my_func(...)
+"""
+```
+15. Document the return type of functions using "-> <return type>" suffix. For example:
+```
+"""
+    Internal: my_func(...) -> Int
+"""
+```
